@@ -30,7 +30,7 @@ const POINTS_KEY = {
   'SCISSORS': 3
 }
 
-function findScore(roundCode) {
+function findScoreSecondChallenge(roundCode) {
   const theirPlay = PLAY_KEY[roundCode[0]]
   const outcome = OUTCOME_KEY[roundCode[1]]
   if (outcome === 3) {
@@ -43,19 +43,19 @@ function findScore(roundCode) {
 
 }
 
-// function findScore(plays) {
-//   const theirPlay = PLAY_KEY[plays[0]]
-//   const yourPlay = PLAY_KEY[plays[1]]
-//   let total = POINTS_KEY[yourPlay]
-//   if (theirPlay === yourPlay) {
-//     return total + 3
-//   } else if (WINS[yourPlay] === theirPlay) {
-//     return total + 6
-//   } else {
-//     return total
-//   }
-// }
+function findScoreFirstChallenge(plays) {
+  const theirPlay = PLAY_KEY[plays[0]]
+  const yourPlay = PLAY_KEY[plays[1]]
+  let total = POINTS_KEY[yourPlay]
+  if (theirPlay === yourPlay) {
+    return total + 3
+  } else if (WINS[yourPlay] === theirPlay) {
+    return total + 6
+  } else {
+    return total
+  }
+}
 
-const totalScore = rounds.map(round => findScore(round)).reduce((total, currentScore) => total + currentScore)
+const totalScore = rounds.map(round => findScoreSecondChallenge(round)).reduce((total, currentScore) => total + currentScore)
 
 console.log(totalScore)

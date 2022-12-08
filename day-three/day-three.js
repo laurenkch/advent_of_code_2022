@@ -31,7 +31,6 @@ function findCommoneValueOfThree(group) {
   const thirdElfContents = group[2]
 
   const letter = firstElfContents.split('').find(letter => secondElfContents.split('').includes(letter) && thirdElfContents.split('').includes(letter))
-  console.log('letter', letter)
   return letter
 }
 
@@ -45,6 +44,6 @@ function getPriority(contents) {
   }
 }
 
-const totalPriority = newList.map(group => getPriority(group)).reduce((total, currentItem) => total + currentItem)
+const answer = newList.map(group => getPriority(group)).reduce((total, currentItem) => total + currentItem)
 
-console.log('totalPriority', totalPriority)
+console.log(answer)

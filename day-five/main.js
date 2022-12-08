@@ -39,4 +39,4 @@ function getTopCrate(state) {
   return topCrates.join('')
 }
 const answer = readInstructions(instructions, state)
-console.log('answer', answer)
+console.log(answer)
