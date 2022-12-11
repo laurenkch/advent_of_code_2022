@@ -1,4 +1,4 @@
-import { checkVisibility, findLineVisibility, findGridVisibility } from './main.js'
+import { checkVisibility, findLineVisibility, findGridVisibility } from './part-one.js'
 
 const line = ['3', '0', '3', '7', '3']
 
