@@ -6,7 +6,7 @@ import * as fs from 'fs';
 const formattedReadout = readout.trim().split('$ ')
 write('formattedReadout.txt', formattedReadout)
 
-function write(name, data) {
+export function write(name, data) {
   fs.writeFile(name, JSON.stringify(data, null, 2), (error) => {
     if (error) {
       console.log(error)
